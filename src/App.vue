@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
-    <!-- <MyCompo my_msg="by Roque"></MyCompo> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Assignment_06></Assignment_06>
   </div>
@@ -9,7 +8,6 @@
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
-//import MyCompo from './components/MyCompo.vue'
 
 import Assignment_06 from './Assignment_06.vue'
 
@@ -17,7 +15,6 @@ export default {
   name: 'app',
   components: {
     //HelloWorld,
-    //MyCompo,
     Assignment_06
   }
 } 
