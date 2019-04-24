@@ -10,10 +10,9 @@
 
 <script>
 export default {
-    name: 'MyHeader',
-    data: function() {
+    data() {
         return {
-            title: 'Server Status'
+            title: 'Server Status...'
         }
     }
 }
