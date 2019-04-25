@@ -8,9 +8,7 @@
                 <form>
                     <div class="form-group">
                         <select class="form-control"
-                            v-model="status" 
-                            v-if="status" 
-                            @change="changeStatus">
+                            v-model="selectedServer.status">
 
                             <option disabled value="">Pick a status for this Server:</option>
                             <option>Critical</option>
@@ -34,20 +32,13 @@ import { eventBus } from '../../../main.js';
 export default {
     data() {
         return {
-            selectedServer: eventBus.selectedServer,
-            status: null
+            selectedServer: eventBus.selectedServer
         }
     },
     created() {
         eventBus.$on('serverWasSelected', (server) => {
             this.selectedServer = server;
-            this.status = server.status;
         });
-    },
-    methods: {
-        changeStatus() {
-            eventBus.selectedServer.status = this.status;
-        }
     }
 }
 </script>

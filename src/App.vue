@@ -10,20 +10,20 @@
           </div>
       </div>
   </div> -->
-  <Assignment_07></Assignment_07>
+  <Assignment_08></Assignment_08>
 </template>
 
 <script>
   //import HelloWorld from './components/HelloWorld.vue'
   //import User from './components/User.vue';
-  import Assignment_07 from './Assignment_07.vue';
+  import Assignment_08 from './Assignment_08.vue';
 
   export default {
     name: 'app',
     components: {
       //HelloWorld,
       // appUser: User
-      Assignment_07,
+      Assignment_08,
     }
   } 
 </script>
@@ -37,8 +37,4 @@
   color: #2c3e50;
   margin-top: 60px;
 } */
-    div.component {
-        border: 1px solid black;
-        padding: 30px;
-    }
 </style>
