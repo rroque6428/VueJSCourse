@@ -1,16 +1,14 @@
 <template>
-  <CourseProject02></CourseProject02>
+  <app-handle-form></app-handle-form>
 </template>
 
 <script>
-  import CourseProject02 from './CourseProject02.vue';
+  import HandleFormExercise from './components/assignment_09/HandleFormExercise.vue';
 
   export default {
     name: 'app',
     components: {
-      //HelloWorld,
-      // appUser: User
-      CourseProject02,
+      appHandleForm: HandleFormExercise
     }
   } 
 </script>
