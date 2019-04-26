@@ -84,9 +84,9 @@
                 // Setters/Getters 
                 // https://vuejs.org/v2/api/#computed
                 get() {
-                    var s1 = this.user.firstname;
-                    var s2 = this.user.lastname;
-                    
+                    let s1 = this.user.firstname;
+                    let s2 = this.user.lastname;
+
                     if (s1 && s2) {
                         return s2 + ", " + s1;
                     }
@@ -94,7 +94,7 @@
                 },
                 set(v) {
                     if (v.indexOf(',') > -1) {
-                        var arr = v.split(',');
+                        let arr = v.split(',');
 
                         this.user.lastname = arr[0].trim();
                         this.user.firstname = arr[1].trim();
