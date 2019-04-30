@@ -1,14 +1,14 @@
 <template>
-  <app-custom-directive></app-custom-directive>
+  <app-filter-mixins></app-filter-mixins>
 </template>
 
 <script>
-  import CustomDirective from './components/assignment_10/CustomDirective.vue';
+  import FilterandMixins from './components/assignment11/FilterandMixins.vue';
 
   export default {
     name: 'app',
     components: {
-      appCustomDirective: CustomDirective
+      appFilterMixins: FilterandMixins
     }
   } 
 </script>

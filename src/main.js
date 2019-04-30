@@ -3,6 +3,7 @@ import App from './App.vue'
 
 Vue.config.productionTip = false;
 
+// Global object for Common acess by all components
 export const eventBus = new Vue({
   data() {
     return {
@@ -17,6 +18,7 @@ export const eventBus = new Vue({
   }
 });
 
+// Global Directive
 Vue.directive('highlight', {
   bind(el, binding) {
     // el.style.backgroundColor = 'green';
@@ -41,6 +43,13 @@ Vue.directive('highlight', {
       }, delay);
     }
   }
+});
+
+Vue.filter('countLetters', (s) => {
+  if (s) {
+    return `${s} (${s.length})`;
+  }
+  return ''
 });
 
 new Vue({
