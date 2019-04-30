@@ -6,7 +6,7 @@
                     <!-- Exercise 1 -->
                     <div class="form-row">
                         <div class="col">
-                            <label for="firstname">Firstname</label>
+                            <label v-highlight:background.delayed="'red'" for="firstname">Firstname</label>
                             <input type="text" id="firstname" class="form-control" v-model="user.firstname">
                         </div>
                         <div class="col">

@@ -1,14 +1,14 @@
 <template>
-  <app-handle-form></app-handle-form>
+  <app-custom-directive></app-custom-directive>
 </template>
 
 <script>
-  import HandleFormExercise from './components/assignment_09/HandleFormExercise.vue';
+  import CustomDirective from './components/assignment_10/CustomDirective.vue';
 
   export default {
     name: 'app',
     components: {
-      appHandleForm: HandleFormExercise
+      appCustomDirective: CustomDirective
     }
   } 
 </script>
