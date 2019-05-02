@@ -1,7 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueResource from 'vue-resource';
+
+import VueRouter from 'vue-router';
+import { routes } from './routes.js';
 
 Vue.config.productionTip = false;
+
+// HTTP Requests via vue-resource (Axios is the alternative)
+Vue.use(VueResource);
+Vue.http.options.root = 'https://vuejs-proj-a1b02.firebaseio.com/data.json';
+
+// Router plugin
+Vue.use(VueRouter);
+const router = new VueRouter({
+  routes: routes
+});
 
 // Global object for Common acess by all components
 export const eventBus = new Vue({
@@ -53,5 +67,6 @@ Vue.filter('countLetters', (s) => {
 });
 
 new Vue({
-  render: h => h(App),
+  router: router,
+  render: h => h(App)
 }).$mount('#app');
