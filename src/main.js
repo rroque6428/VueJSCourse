@@ -14,7 +14,13 @@ Vue.http.options.root = 'https://vuejs-proj-a1b02.firebaseio.com/data.json';
 // Router plugin
 Vue.use(VueRouter);
 const router = new VueRouter({
-  routes: routes
+  routes: routes,
+  mode: 'history',  // HTTP Server must be set. Check docs.
+  scrollBehavior(to) {
+    if (to.hash) {
+      return { selector: to.hash };
+    }
+  } 
 });
 
 // Global object for Common acess by all components
