@@ -1,18 +1,14 @@
 <template>
-  <app-route-lessons></app-route-lessons>
+  <app-vuex-lessons></app-vuex-lessons>
 </template>
 
 <script>
-  // import FilterandMixins from './components/assignment11/FilterandMixins.vue';
-  // import HttpRequests from './HttpRequests.vue';
-  import RouteLessons from './RouteLessons.vue';
+  import VuexLessons from './VuexLessons.vue';
 
   export default {
     name: 'app',
     components: {
-      // appFilterMixins: FilterandMixins,
-      // appHttpRequests: HttpRequests,
-      appRouteLessons: RouteLessons
+      appVuexLessons: VuexLessons
     }
   } 
 </script>

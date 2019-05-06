@@ -5,6 +5,8 @@ import VueResource from 'vue-resource';
 import VueRouter from 'vue-router';
 import { routes } from './routes.js';
 
+import { store } from './store/store.js';
+
 Vue.config.productionTip = false;
 
 // HTTP Requests via vue-resource (Axios is the alternative)
@@ -20,7 +22,7 @@ const router = new VueRouter({
     if (to.hash) {
       return { selector: to.hash };
     }
-  } 
+  }
 });
 
 // Global object for Common acess by all components
@@ -73,6 +75,7 @@ Vue.filter('countLetters', (s) => {
 });
 
 new Vue({
-  router: router,
+  router,
+  store,
   render: h => h(App)
 }).$mount('#app');
