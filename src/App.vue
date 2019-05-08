@@ -1,14 +1,14 @@
 <template>
-  <app-vuex-lessons></app-vuex-lessons>
+  <app-final-project></app-final-project>
 </template>
 
 <script>
-  import VuexLessons from './VuexLessons.vue';
+  import FinalProject from './FinalProject.vue';
 
   export default {
     name: 'app',
     components: {
-      appVuexLessons: VuexLessons
+      appFinalProject: FinalProject
     }
   } 
 </script>

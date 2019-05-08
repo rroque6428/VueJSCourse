@@ -6,6 +6,8 @@ import * as mutations from './mutations';
 import * as actions from './actions';
 
 import counter from './modules/counter';
+import finalprojectStocks from '../finalproject/store/modules/stocks';
+import finalprojectPortfolio from '../finalproject/store/modules/portfolio';
 
 Vue.use(Vuex);
 
@@ -17,6 +19,8 @@ export const store = new Vuex.Store({
     mutations,
     actions,
     modules: {
-        counter
+        counter,
+        finalprojectStocks,
+        finalprojectPortfolio
     }
 });

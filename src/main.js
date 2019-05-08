@@ -2,10 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueResource from 'vue-resource';
 
-import VueRouter from 'vue-router';
-import { routes } from './routes.js';
+import 'animate.css/animate.min.css';
 
-import { store } from './store/store.js';
+import VueRouter from 'vue-router';
+import { routes } from './finalproject/routes';
+
+import { store } from './store/store';
 
 Vue.config.productionTip = false;
 
@@ -16,13 +18,8 @@ Vue.http.options.root = 'https://vuejs-proj-a1b02.firebaseio.com/data.json';
 // Router plugin
 Vue.use(VueRouter);
 const router = new VueRouter({
-  routes: routes,
   mode: 'history',  // HTTP Server must be set. Check docs.
-  scrollBehavior(to) {
-    if (to.hash) {
-      return { selector: to.hash };
-    }
-  }
+  routes
 });
 
 // Global object for Common acess by all components
@@ -72,6 +69,10 @@ Vue.filter('countLetters', (s) => {
     return `${s} (${s.length})`;
   }
   return ''
+});
+
+Vue.filter('currency', (value) => {
+  return '$' + value.toLocaleString();
 });
 
 new Vue({
