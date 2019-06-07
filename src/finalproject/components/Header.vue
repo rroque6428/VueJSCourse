@@ -20,7 +20,7 @@
             <li class="navbar-item">
               <a class="nav-link" href="#" @click="endDay">End Day</a>
             </li>
-            <li class="dropdown" :class="{show: isDropdownOpen}">
+            <li class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" 
                   type="button"
                   id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Save&Load
